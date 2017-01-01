@@ -7,3 +7,10 @@
 /build
 /captures
 .externalNativeBuild
+/kiwilibrary/build/
+.idea/
+kiwilibrary/libs/
+kiwilibrary/src/androidTest/
+kiwilibrary/src/test/
+libs/
+src/main/res/drawable/

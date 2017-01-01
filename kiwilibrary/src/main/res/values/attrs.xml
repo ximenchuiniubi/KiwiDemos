@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="LetterNavBar">
+        <attr name="letter_array" format="string"/>
+        <attr name="letter_size" format="dimension"/>
+        <attr name="letter_color" format="color" />
+    </declare-styleable>
+</resources>
