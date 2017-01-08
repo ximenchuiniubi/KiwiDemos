@@ -12,6 +12,7 @@
     tools:context="com.kiwidemos.letterNavBarDemo.LetterNavBarDemoActivity">
 
     <com.kiwi.library.widget.LetterNavBar
+        android:id="@+id/letter_bar"
         android:layout_width="20dp"
         android:layout_height="match_parent"
         android:layout_alignParentRight="true"

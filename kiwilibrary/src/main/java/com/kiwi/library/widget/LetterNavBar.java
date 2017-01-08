@@ -19,7 +19,6 @@ import com.kiwi.library.utils.DensityUtil;
  */
 public class LetterNavBar extends View {
     private Context context;
-    private Canvas canvas;
     private OnTouchLetterChangeListenner onTouchLetterChangeListenner;
     private Paint paint=new Paint();
     /**
@@ -61,15 +60,14 @@ public class LetterNavBar extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        this.canvas = canvas;
         if (showBg) canvas.drawColor(Color.parseColor("#ffebedf2"));
-        drawLetters();
+        drawLetters(canvas);
     }
 
     /**
      * 画字母
      */
-    private void drawLetters() {
+    private void drawLetters(Canvas canvas) {
         int width = getWidth();
         int height = getHeight();
         //每个字母高度
@@ -130,6 +128,16 @@ public class LetterNavBar extends View {
                 break;
         }
         return true;
+    }
+
+    public void setLetters(String letters) {
+        this.letters = letters.toCharArray();
+        this.postInvalidate();
+    }
+
+    public void setLetters(int strId) {
+        String letters = context.getResources().getString(strId);
+        setLetters(letters);
     }
 
     /**
